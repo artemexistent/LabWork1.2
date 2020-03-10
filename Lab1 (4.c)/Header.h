@@ -10,13 +10,13 @@
 
 using namespace std;
 struct Train{
-    char number[6];
-    char name[100];
-    char type[20];
-    char dateDep[7];
-    char timeDep[7];
-    char dateArr[7];
-    char timeArr[7];
+    char number[6]={'0'};
+    char name[100]={'0'};
+    char type[20]={'0'};
+    char dateDep[7]={'0'};
+    char timeDep[7]={'0'};
+    char dateArr[7]={'0'};
+    char timeArr[7]={'0'};
     double level;
     int ID;
 

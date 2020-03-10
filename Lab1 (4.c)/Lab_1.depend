@@ -2,7 +2,7 @@
 1583832740 source:c:\users\sergey\desktop\lab_1\main.cpp
 	"Header.h"
 
-1583870583 c:\users\sergey\desktop\lab_1\header.h
+1583871658 c:\users\sergey\desktop\lab_1\header.h
 	<iostream>
 	<fstream>
 	<cstdio>
@@ -33,7 +33,7 @@
 1583501115 source:c:\users\sergey\desktop\lab_1\vector.cpp
 	"Header.h"
 
-1583870501 source:c:\users\sergey\desktop\lab_1\demo.cpp
+1583871238 source:c:\users\sergey\desktop\lab_1\demo.cpp
 	"Header.h"
 
 1583834067 source:c:\users\sergey\desktop\lab_1\bech.cpp

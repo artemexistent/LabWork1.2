@@ -6,11 +6,11 @@ void DemoBin();
 
 
 void Demo(){
-    //DemoVec();
+    DemoVec();
     system("cls");
     DemoTxt();
     system("cls");
-    //DemoBin();
+    DemoBin();
 }
 
 void DemoVec(){
@@ -24,36 +24,36 @@ void DemoVec(){
         Train a;
         for (int j=0;j<4;j++)
             a.number[j] = char(rand()%10 + '0');
-            cout << a.number << "\t";
+            cout << a.number << " ";
         for (int j=0;j<5;j++)
             a.name[j] = char(rand() % ('z' - 'a') + 'a');
-            cout << a.name << "\t";
+            cout << a.name << " ";
        a.type[0]='o'; a.type[1]='r'; a.type[2]='d'; a.type[3]='i'; a.type[4]='n'; a.type[5]='a'; a.type[6]='r'; a.type[7]='y';
-        cout << a.type << "\t";
+        cout << a.type << " ";
 
        for (int j=0;j<5;j++)
             if (j!=2)
                 a.dateDep[j] = char(rand()%2 + '0');
             else a.dateDep[j]='.';
-            cout << a.dateDep << "\t";
+            cout << a.dateDep << " ";
        for (int j=0;j<5;j++)
             if (j!=2)
                 a.timeDep[j] = char(rand()%3 + '0');
             else a.timeDep[j]=':';
-            cout << a.timeDep << "\t";
+            cout << a.timeDep << " ";
        for (int j=0;j<5;j++)
             if (j!=2)
                 a.dateArr[j] = char(rand()%2 + '0');
             else a.dateArr[j] = '.';
-        cout << a.dateArr << "\t";
+        cout << a.dateArr << " ";
         for (int j=0;j<5;j++)
             if (j!=2)
                 a.timeArr[j] = char(rand()%3 + '0');
             else a.timeArr[j]=':';
-        cout << a.timeArr << "\t";
+        cout << a.timeArr << " ";
         a.ID = i + 1;
         a.level = double ((rand()%14)/13.0);
-        cout << a.level << "\t" << a.ID << endl;
+        cout << a.level << " " << a.ID << endl;
         train.push_back(a);
       //  cout << a.number << "   " << a.name << "   " << a.type << "   " << a.dateDep << "   " << a.timeDep << "   " << a.dateArr << "   " << a.timeArr << "   " << a.level << "   " << a.ID <<  "    Added\n";
         Sleep(500);
@@ -141,36 +141,36 @@ void DemoTxt(){
         Train a;
         for (int j=0;j<4;j++)
             a.number[j] = char(rand()%10 + '0');
-            cout << a.number << "\t";
+            cout << a.number << " ";
         for (int j=0;j<5;j++)
             a.name[j] = char(rand() % ('z' - 'a') + 'a');
-            cout << a.name << "\t";
+            cout << a.name << " ";
        a.type[0]='o'; a.type[1]='r'; a.type[2]='d'; a.type[3]='i'; a.type[4]='n'; a.type[5]='a'; a.type[6]='r'; a.type[7]='y';
-        cout << a.type << "\t";
+        cout << a.type << " ";
 
        for (int j=0;j<5;j++)
             if (j!=2)
                 a.dateDep[j] = char(rand()%2 + '0');
             else a.dateDep[j]='.';
-            cout << a.dateDep << "\t";
+            cout << a.dateDep << " ";
        for (int j=0;j<5;j++)
             if (j!=2)
                 a.timeDep[j] = char(rand()%3 + '0');
             else a.timeDep[j]=':';
-            cout << a.timeDep << "\t";
+            cout << a.timeDep << " ";
        for (int j=0;j<5;j++)
             if (j!=2)
                 a.dateArr[j] = char(rand()%2 + '0');
             else a.dateArr[j] = '.';
-        cout << a.dateArr << "\t";
+        cout << a.dateArr << " ";
         for (int j=0;j<5;j++)
             if (j!=2)
                 a.timeArr[j] = char(rand()%3 + '0');
             else a.timeArr[j]=':';
-        cout << a.timeArr << "\t";
+        cout << a.timeArr << " ";
         a.ID = i + 1;
         a.level = double ((rand()%14)/13.0);
-        cout << a.level << "\t" << a.ID << endl;
+        cout << a.level << " " << a.ID << endl;
         FILE *ptrFile = fopen( "Train.txt", "a" );
         fwrite( &a , sizeof( Train ), 1, ptrFile );
         fclose( ptrFile );
@@ -289,36 +289,36 @@ void DemoBin(){
         Train a;
         for (int j=0;j<4;j++)
             a.number[j] = char(rand()%10 + '0');
-            cout << a.number << "\t";
+            cout << a.number << " ";
         for (int j=0;j<5;j++)
             a.name[j] = char(rand() % ('z' - 'a') + 'a');
-            cout << a.name << "\t";
+            cout << a.name << " ";
        a.type[0]='o'; a.type[1]='r'; a.type[2]='d'; a.type[3]='i'; a.type[4]='n'; a.type[5]='a'; a.type[6]='r'; a.type[7]='y';
-        cout << a.type << "\t";
+        cout << a.type << " ";
 
        for (int j=0;j<5;j++)
             if (j!=2)
                 a.dateDep[j] = char(rand()%2 + '0');
             else a.dateDep[j]='.';
-            cout << a.dateDep << "\t";
+            cout << a.dateDep << " ";
        for (int j=0;j<5;j++)
             if (j!=2)
                 a.timeDep[j] = char(rand()%3 + '0');
             else a.timeDep[j]=':';
-            cout << a.timeDep << "\t";
+            cout << a.timeDep << " ";
        for (int j=0;j<5;j++)
             if (j!=2)
                 a.dateArr[j] = char(rand()%2 + '0');
             else a.dateArr[j] = '.';
-        cout << a.dateArr << "\t";
+        cout << a.dateArr << " ";
         for (int j=0;j<5;j++)
             if (j!=2)
                 a.timeArr[j] = char(rand()%3 + '0');
             else a.timeArr[j]=':';
-        cout << a.timeArr << "\t";
+        cout << a.timeArr << " ";
         a.ID = i + 1;
         a.level = double ((rand()%14)/13.0);
-        cout << a.level << "\t" << a.ID << endl;
+        cout << a.level << " " << a.ID << endl;
         FILE *ptrFile = fopen( "Train.bin", "ab" );
         fwrite( &a , sizeof( Train ), 1, ptrFile );
         fclose( ptrFile );
@@ -422,3 +422,4 @@ void DemoBin(){
 
 
 }
+
