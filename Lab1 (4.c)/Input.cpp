@@ -1,12 +1,4 @@
-#pragma once
-#include <iostream>
-#include <cstdio>
-#include <vector>
-#include <windows.h>
-#include "HeaderBIN&TXT.h"
 #include "Header.h"
-
-using namespace std;
 
 char numberSize = 5;
 char dateSizetime = 6;

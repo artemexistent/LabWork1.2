@@ -1,11 +1,4 @@
-#pragma once
-#include <iostream>
-#include <cstdio>
-#include <windows.h>
-#include "HeaderBIN&TXT.h"
 #include "Header.h"
-
-using namespace std;
 
 bool compname( char *a,char *b );
 
@@ -17,7 +10,7 @@ bool compnumbpopl( char * numb1, double lvl1, char *numb2, double lvl2 );
 void FindBIN( char *name, char *numb, double popl, char *date1, char *date2,
           char *time1, char *time2, int key );
 
-void FinD( bool key ){
+void FinD( int key ){
     char name[100];
     char date1[5];
     char date2[5];
@@ -40,16 +33,10 @@ void FinD( bool key ){
                     cout << "\nEnter second time:"; InputTime( time2 ); break;
             case 3: cout << "Bye"; return;
         }
-        if (key)
-            FindBIN( name, numb, popl, date1, date2, time1, time2, answer );
-        else FindTXT( name, numb, popl, date1, date2, time1, time2, answer );
+        if (key == 1) FindBIN( name, numb, popl, date1, date2, time1, time2, answer );
+        if (key == 2) FindTXT( name, numb, popl, date1, date2, time1, time2, answer );
+        if (key == 3) FindVEC( name, numb, popl, date1, date2, time1, time2, answer );
     }while( answer!=3 );
- /*   delete[] name;
-    delete[] numb;
-    delete[] date1;
-    delete[] date2;
-    delete[] time1;
-    delete[] time2;*/
     system( "pause" );
     return;
 }

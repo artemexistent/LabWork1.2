@@ -1,11 +1,4 @@
-#pragma once
-#include <iostream>
-#include <cstdio>
-#include <windows.h>
-#include "HeaderBIN&TXT.h"
 #include "Header.h"
-
-using namespace std;
 
 void FindBIN( char *name, char *numb, double popl, char *date1, char *date2, char *time1, char *time2, int key ){
     FILE *ptrFile = fopen( "Train.bin", "rb" );

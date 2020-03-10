@@ -1,10 +1,38 @@
+#pragma once
+#include <iostream>
+#include <fstream>
+#include <cstdio>
+#include <conio.h>
+#include <vector>
+#include <windows.h>
+#include <time.h>
+#include "HeaderBIN&TXT.h"
+
+using namespace std;
+struct Train{
+    char number[6];
+    char name[100];
+    char type[20];
+    char dateDep[7];
+    char timeDep[7];
+    char dateArr[7];
+    char timeArr[7];
+    double level;
+    int ID;
+
+};
+void Demo();
+void Bech();
+
+int Menu();
+
 int StartMenu();
 
 int menu();
 
 int menu2();
 
-void FinD( bool key );
+void FinD( int key );
 
 bool compname( char *a,char *b );
 

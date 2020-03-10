@@ -1,12 +1,6 @@
-#pragma once
-#include <iostream>
-#include <cstdio>
-#include <vector>
-#include <windows.h>
-#include "HeaderBIN&TXT.h"
 #include "Header.h"
 
-using namespace std;
+int Kol;
 
 void AddBIN(){
     system( "cls" );
@@ -20,6 +14,8 @@ void AddBIN(){
     cout << "\n   date of arrival:"; InputDate( train.dateArr );
     cout << "\n   time of arrival:"; InputTime( train.timeArr );
     cout << "\n   level of popularity of tickets:"; cin >> train.level;
+    Kol ++;
+    train.ID = Kol;
     system( "cls" );
     FILE *ptrFile = fopen( "Train.bin", "ab" );
     fwrite( &train , sizeof( Train ), 1, ptrFile );
@@ -32,8 +28,8 @@ void AddBIN(){
 void DeleteBIN(){
      system( "cls" );
      FILE *ptrFile = fopen( "Train.bin", "rb" );
-     char number[4];
-     cout << "Enter the train number you want to delete:"; InputNumber( number );
+     int number;
+     cout << "Enter the train number you want to delete:"; cin >> number;
      vector <Train> base;
      Train info;
      while (true){
@@ -46,7 +42,7 @@ void DeleteBIN(){
      remove( "Train.bin" );
      FILE *ptrFil = fopen( "Train.bin", "wb" );
      for ( int i = 0;i < base.size();i ++ ){
-        if ( !compname( base[i].number, number ) )
+        if ( base[i].ID != number )
         fwrite( &base[i], 1, sizeof( Train ), ptrFil );
      }
      fclose( ptrFil );
@@ -62,7 +58,7 @@ void ViewBIN(){
         fread( &info, sizeof( Train ), 1, ptrFile );
         if ( feof( ptrFile ) )
             break;
-        cout << info.number << "   " << info.name << "   " << info.type << "   " << info.dateDep << "   " << info.timeDep << "   " << info.dateArr << "   " << info.timeArr << "   " << info.level << "\n";
+        cout << info.number << "   " << info.name << "   " << info.type << "   " << info.dateDep << "   " << info.timeDep << "   " << info.dateArr << "   " << info.timeArr << "   " << info.level << "   " << info.ID << "\n";
     }
     fclose( ptrFile );
     system( "pause" );
@@ -82,6 +78,8 @@ void AddTXT(){
     cout << "\n   time of arrival:"; InputTime( train.timeArr );
     cout << "\n   level of popularity of tickets:"; cin >> train.level;
     system( "cls" );
+    Kol ++;
+    train.ID = Kol;
     FILE *ptrFile = fopen( "Train.txt", "a" );
     fwrite( &train , sizeof( Train ), 1, ptrFile );
     fclose( ptrFile );
@@ -93,8 +91,8 @@ void AddTXT(){
 void DeleteTXT(){
      system( "cls" );
      FILE *ptrFile = fopen( "Train.txt", "r" );
-     char number[4];
-     cout << "Enter the train number you want to delete:"; InputNumber( number );
+     int number;
+     cout << "Enter the train number you want to delete:"; cin >> number ;
      vector <Train> base;
      Train info;
      while (true){
@@ -107,7 +105,7 @@ void DeleteTXT(){
      remove( "Train.txt" );
      FILE *ptrFil = fopen( "Train.txt", "w" );
      for ( int i = 0;i < base.size();i ++ ){
-        if ( !compname( base[i].number, number ) )
+        if ( base[i].ID != number )
         fwrite( &base[i], 1, sizeof( Train ), ptrFil );
      }
      fclose( ptrFil );
@@ -123,7 +121,7 @@ void ViewTXT(){
         fread( &info, sizeof( Train ), 1, ptrFile );
         if ( feof( ptrFile ) )
             break;
-        cout << info.number << "   " << info.name << "   " << info.type << "   " << info.dateDep << "   " << info.timeDep << "   " << info.dateArr << "   " << info.timeArr << "   " << info.level << "\n";
+        cout << info.number << "   " << info.name << "   " << info.type << "   " << info.dateDep << "   " << info.timeDep << "   " << info.dateArr << "   " << info.timeArr << "   " << info.level << "   " << info.ID <<  "\n";
     }
     fclose( ptrFile );
     system( "pause" );

@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1583832740 source:c:\users\sergey\desktop\lab_1\main.cpp
+	"Header.h"
+
+1583870583 c:\users\sergey\desktop\lab_1\header.h
+	<iostream>
+	<fstream>
+	<cstdio>
+	<conio.h>
+	<vector>
+	<windows.h>
+	<time.h>
+	"HeaderBIN&TXT.h"
+
+1583358926 c:\users\sergey\desktop\lab_1\headerbin&txt.h
+	"Header.h"
+
+1583498656 source:c:\users\sergey\desktop\lab_1\find.cpp
+	"Header.h"
+
+1583352657 source:c:\users\sergey\desktop\lab_1\input.cpp
+	"Header.h"
+
+1583352662 source:c:\users\sergey\desktop\lab_1\findbin&txt.cpp
+	"Header.h"
+
+1583360011 source:c:\users\sergey\desktop\lab_1\mainbin&txt.cpp
+	"Header.h"
+
+1583498431 source:c:\users\sergey\desktop\lab_1\menu.cpp
+	"Header.h"
+
+1583501115 source:c:\users\sergey\desktop\lab_1\vector.cpp
+	"Header.h"
+
+1583870501 source:c:\users\sergey\desktop\lab_1\demo.cpp
+	"Header.h"
+
+1583834067 source:c:\users\sergey\desktop\lab_1\bech.cpp
+	"Header.h"
+

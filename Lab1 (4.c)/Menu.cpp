@@ -1,12 +1,28 @@
-#pragma once
-#include <iostream>
-#include <cstdio>
-#include <vector>
-#include <windows.h>
-#include "HeaderBIN&TXT.h"
 #include "Header.h"
 
-using namespace std;
+int Menu(){
+    int key = 0;
+    int code;
+    do {
+        system( "cls" );
+        cout << "Choose format:\n";
+        key = ( key + 3 ) % 3;
+        if ( key == 0 ) cout<<"-> Interactive"<<endl;
+            else  cout<<"   Interactive"<<endl;
+        if ( key == 1 ) cout<<"-> Demonstration"<<endl;
+            else  cout<<"   Demonstration"<<endl;
+        if ( key == 2 ) cout<<"-> Benchmark"<<endl;
+            else  cout<<"   Benchmark"<<endl;
+        code = _getch();
+        if ( code == 224 ){
+            code = _getch();
+            if ( code == 80 ) key ++;
+            if ( code == 72 ) key --;
+        }
+    }while( code != 13 );
+    system( "cls" );
+    return key;
+}
 
 int StartMenu() {
     int key = 0;
